@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\BusinessSettingsController;
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
 
-    Route::group(['middleware' => ['admin', 'current-module', 'actch:admin_panel']], function () {
+    Route::group(['middleware' => ['admin', 'current-module']], function () {
         Route::get('/test', function () {
             // return view('admin-views.test.VendorPanel-tax-report');
             // return view('admin-views.test.surgeprice-setup.list');
@@ -405,10 +405,10 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
                 Route::post('login-setup/update', 'BusinessSettingsController@login_settings_update')->name('update');
             });
 
-            Route::group(['prefix' => 'addon-activation', 'as' => 'addon-activation.'], function () {
-                Route::get('', 'AddonActivationController@index')->name('index');
-                Route::post('activation', 'AddonActivationController@activation')->name('activation');
-            });
+            // Route::group(['prefix' => 'addon-activation', 'as' => 'addon-activation.'], function () {
+            //     Route::get('', 'AddonActivationController@index')->name('index');
+            //     Route::post('activation', 'AddonActivationController@activation')->name('activation');
+            // });
 
             Route::get('login-url-setup', 'BusinessSettingsController@login_url_page')->name('login_url_page');
             Route::post('login-url-setup/update', 'BusinessSettingsController@login_url_page_update')->name('login_url_update');
@@ -545,7 +545,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
             Route::group(['namespace' => 'System', 'prefix' => 'system-addon', 'as' => 'system-addon.', 'middleware' => ['module:user_management']], function () {
                 Route::get('/', 'AddonController@index')->name('index');
                 Route::post('publish', 'AddonController@publish')->name('publish');
-                Route::post('activation', 'AddonController@activation')->name('activation');
+                // Route::post('activation', 'AddonController@activation')->name('activation');
                 Route::post('upload', 'AddonController@upload')->name('upload');
                 Route::post('delete', 'AddonController@delete_theme')->name('delete');
             });

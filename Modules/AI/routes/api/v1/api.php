@@ -15,7 +15,7 @@ use Modules\AI\app\Http\Controllers\Api\ProductAutoFillController;
 |
 */
 
-Route::group(['prefix' => 'ai', 'as' => 'ai.','middleware'=>['vendor.api','actch:vendor_app']], function () {
+Route::group(['prefix' => 'ai', 'as' => 'ai.','middleware'=>['vendor.api']], function () {
     // Route::get('generate-food-data', [ProductAutoFillController::class, 'getData']);
     Route::get('generate-title-and-description', [ProductAutoFillController::class, 'getTitleAndDescription']);
     Route::get('generate-other-data', [ProductAutoFillController::class, 'getOtherData']);

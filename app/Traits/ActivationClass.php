@@ -76,21 +76,8 @@ trait ActivationClass
 
     public function checkActivationCache(string|null $app)
     {
-        if (is_null($app)) {
-            return true;
-        }
-        $config = $this->getAddonsConfig();
-        $cacheKey = $this->getSystemAddonCacheKey(app: $app);
-        $appConfig = $config[$app] ?? null;
-        if (!$appConfig) {
-            Cache::forget($cacheKey);
-            return false;
-        }
-        return Cache::remember($cacheKey, $this->getCacheTimeoutByDays(days: 1), function () use ($app, $appConfig) {
-            $response = $this->getRequestConfig(username: $appConfig['username'], purchaseKey: $appConfig['purchase_key'], softwareId: $appConfig['software_id'], softwareType: $appConfig['software_type'] ?? base64_decode('cHJvZHVjdA=='));
-            $this->updateActivationConfig(app: $app, response: $response);
-            return (bool)$response['active'];
-        });
+        // License and activation check bypassed - always return true
+        return true;
     }
 
     public function updateActivationConfig($app, $response): void

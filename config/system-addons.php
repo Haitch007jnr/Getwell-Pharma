@@ -1,27 +1,27 @@
 <?php return array (
   'admin_panel' =>
   array (
-    'active' => '0',
-    'username' => '1',
-    'purchase_key' => '1',
+    'active' => '1',
+    'username' => '',
+    'purchase_key' => 'nulled',
     'software_id' => 'MzY3NzIxMTI=',
     'domain' => '',
     'software_type' => 'product',
   ),
   'vendor_panel' =>
   array (
-    'active' => '0',
+    'active' => '1',
     'username' => '',
-    'purchase_key' => '',
+    'purchase_key' => 'nulled',
     'software_id' => '',
     'domain' => '',
     'software_type' => 'addon',
   ),
   'user_app' =>
   array (
-    'active' => '0',
+    'active' => '1',
     'username' => '',
-    'purchase_key' => '',
+    'purchase_key' => 'nulled',
     'software_id' => '',
     'domain' => '',
     'software_type' => 'addon',
@@ -30,7 +30,7 @@
   array (
     'active' => '1',
     'username' => '',
-    'purchase_key' => '',
+    'purchase_key' => 'nulled',
     'software_id' => 'MzY3NzIxNzM=',
     'domain' => '',
     'software_type' => 'addon',
@@ -39,7 +39,7 @@
   array (
     'active' => '1',
     'username' => '',
-    'purchase_key' => '',
+    'purchase_key' => 'nulled',
     'software_id' => 'MzY3NzIxNDg=',
     'domain' => '',
     'software_type' => 'addon',
@@ -48,7 +48,7 @@
   array (
     'active' => '1',
     'username' => '',
-    'purchase_key' => '',
+    'purchase_key' => 'nulled',
     'software_id' => 'NDUzNzAzNTE=',
     'domain' => '',
     'software_type' => 'addon',
