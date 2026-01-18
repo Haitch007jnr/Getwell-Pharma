@@ -35,10 +35,7 @@
                 <h5 class="fw-normal">Update Database Information</h5>
             </div>
             <p class="mb-4">Provide your database information.
-                <a href="https://docs.6amtech.com/docs-six-am-mart/admin-panel/install-on-server" target="_blank">
-                    Where to get this information ?</a>
-            </p>
-
+            <a href="https://docs.haitchtechsolutions.app/docs-six-am-mart/admin-panel/install-on-server" target="_blank">
             @if (isset($error) || session()->has('error'))
                 <div class="row" style="margin-top: 20px;">
                     <div class="col-md-12">
